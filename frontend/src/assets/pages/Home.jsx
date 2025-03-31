@@ -13,14 +13,13 @@ const Home = () => {
                 },
             });
 
-            if (response.status !== 201) {
+            if (response.status !== 200) {
                 navigate("/login");
             }
         } catch (error) {
             navigate("/login");
             console.log(error);
         }
-        console.log(response);
     };
 
     useEffect(() => {
@@ -34,11 +33,11 @@ const Home = () => {
 
     return (
         <>
-            <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+            <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-b from-gray-200 to-gray-600">
                 <h1 className="m-4 text-4xl font-semibold">Home Page</h1>
                 <button
                     onClick={handleLogout}
-                    className="m-2 py-2 px-8 border-2 rounded-4xl border-red-500 hover:bg-red-500 hover:text-white"
+                    className="m-2 py-2 px-8 border-2 rounded-4xl border-red-500 transition duration-200 ease-in hover:bg-red-500 hover:text-white"
                 >
                     Log Out
                 </button>
