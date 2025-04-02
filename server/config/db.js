@@ -11,6 +11,8 @@ export const connectionToDB = async () => {
             password: process.env.DB_PASS,
             database: process.env.DB_NAME,
         });
+
+        
     }
 
     return connection;
